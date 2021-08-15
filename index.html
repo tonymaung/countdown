@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>Final Countdown</title>
     <!-- Css -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome -->
 </head>
 <body>
-    
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="time.mp4"></source>
+    </video>
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+    <!-- Container -->
+    <div class="container">
+        <!-- Input -->
+        <div class="input-container" id="input-container">
+            <h1>Create a Custom Countdown</h1>
+            <form class="form" id="countdownform">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="What are you counting down to?">
+                <label for="date-picker">Select a Date</label>
+                <input type="date" id="date-picker">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- CountDown -->
+        <div class="countdown" id="countdown" hidden>
+            <h1 class="countdown-title" id="countdown-title"></h1>
+            <ul>
+                <li><span id="days"></span>Days </li>
+                <li><span id="hours"></span>Hours </li>
+                <li><span id="minutes"></span>Minutes </li>
+                <li><span id="seconds"></span>Seconds </li>
+            </ul>
+            <button id="countdown-button">Reset</button>
+        </div>
+        <!-- Complete -->
+        <div class="complete" id="complete" hidden>
+            <h1 class="complete-title">Countdown Complete</h1>
+            <h1 id="complete-info">Countdown finished on </h1>
+            <button id="complete-button">New Countdown</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
